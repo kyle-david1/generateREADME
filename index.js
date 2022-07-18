@@ -2,10 +2,9 @@ const inquirer = require('inquirer');
 const fs = require('fs')
 const generateReadme = require('./generateReadme');
 
- 
-
+ inquirer
 // TODO: Create an array of questions for user input
-const questions = [
+.prompt([
     {
       type: 'input',
       name: 'title',
@@ -16,11 +15,11 @@ const questions = [
       name: 'description',
       message: 'Please write a short description of your project',
     },
-    {
-      type: 'input',
-      name: 'tableOfContents',
-      message: 'Write tables of contents using numbers',
-    },
+    // {
+    //   type: 'input',
+    //   name: 'contents',
+    //   message: 'Write tables of contents using numbers',
+    // },
     {
       type: 'input',
       name: 'installation',
@@ -33,13 +32,13 @@ const questions = [
     },
     {
       type: 'checkbox',
-      name: 'License',
+      name: 'license',
       message: 'Which license did you use?',
       choices: ['None', 'MIT', 'The Unlicense'],
     },
     {
       type: 'input',
-      name: 'Credits',
+      name: 'credits',
       message: 'List all collaborators.',
     },
     {
@@ -57,11 +56,27 @@ const questions = [
       name: 'email',
       message: 'Enter a link to your github ',
     },
-  ];
+  ])
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {
+  .then((answers) => {
+    console.log(answers);
+  
+    fs.writeFile('README.md', (generateReadme(data)), (err) =>
+      err ? console.log(err) : console.log('success!')
+    );
+  });
+  
+  function makeHTML(data){
+    var userName = data.userName;
+    var location = data.location;
+    var bio = data.bio;
+    var GitHub = data.GitHub;
+    
+
+}
 
 // TODO: Create a function to initialize app
 function init() {}

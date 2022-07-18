@@ -1,35 +1,43 @@
-## Title
-${data.title}
+`## ${data.title}
 
 ## Description
+${data.description}
 
 
 
-## Table of Contents (Optional)
+## Table of Contents
+${data.contents}
 
 
 
 ## Installation
+${data.installation}
 
 
 
 ## Usage
+${data.usage}
 
 
 
 ## License
+${data.license}
 
 
 
 ## Credits
+${data.credits}
 
 
 
 ## Tests
+${data.tests}
 
 
 ## Questions 
-## Github username that links to questions
+${data.github}
+${data.email}`
+
 
 
 
