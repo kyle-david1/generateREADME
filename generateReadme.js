@@ -74,7 +74,7 @@ function generateReadme(data) {
   
   
   ## Questions 
-  Github: [${data.github}](https://github.com/)${data.github}
+  Github: [${data.github}](https://github.com/)${data.github}\n
   Email: ${data.email}`;
 }
 

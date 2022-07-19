@@ -1,41 +1,34 @@
-`## ${data.title}
+## README Generator
 
 ## Description
-${data.description}
+Using the node inquire package, a series of predefined questions are written to make up the skeleton of the generated README. Using the command line interface, the user is prompted with a series of questions that are uniquely answered, and, using the writefile and fs properties, a user is able to generate a README for their specific project.
 
 
 
 ## Table of Contents
 -[Installation]
--
+-[Usage]
+-[Credits]
+-[Tests]
+-[Questions]
 
 
 
-## Installation
-${data.installation}
-
-
-
-## Usage
-${data.usage}
-
+## Installation and ## Usage
+from the terminal specific to the file, type 'node index.js' and answer the questions as they appear on the terminal. After answering, a generated README will appear in the file tree. 
 
 
 
 ## Credits
-${data.credits}
+Collaborated with Sara Baqla
 
 
 
 ## Tests
-${data.tests}
+No tests were written for this project
 
 
 ## Questions 
-Github: [${data.github}](https://github.com/)${data.github}
-Email: ${data.email}`
+Github: https://github.com/kyle-david1
 
 
-
-
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
