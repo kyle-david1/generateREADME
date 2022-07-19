@@ -28,7 +28,7 @@ function renderLicenseSection(license) {
   if (license !== 'none') {
     return `license ${license}`
   } else {
-    return '';
+    return ""
   }
 }
 
@@ -45,11 +45,11 @@ function generateReadme(data) {
   
   
   ## Table of Contents
-  -[Installation]
-  -[Usage]
-  -[Credits]
-  -[Tests]
-  -[Questions]
+  -[Installation](#Usage)\n
+  -[Usage](#Usage)\n
+  -[Credits](#Credits)\n
+  -[Tests](#Tests)\n
+  -[Questions](#Questions)\n
   ${renderLicenseLink(data.license)}
   
   
@@ -74,7 +74,7 @@ function generateReadme(data) {
   
   
   ## Questions 
-  Github: [${data.github}](https://github.com/)${data.github}\n
+  Github: [${data.github}](https://github.com/)\n
   Email: ${data.email}`;
 }
 
