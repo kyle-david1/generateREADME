@@ -2,9 +2,9 @@ const inquirer = require('inquirer');
 const fs = require('fs')
 const generateReadme = require('./generateReadme');
 
- inquirer
+
 // TODO: Create an array of questions for user input
-.prompt([
+const questions = [
     {
       type: 'input',
       name: 'title',
@@ -15,11 +15,6 @@ const generateReadme = require('./generateReadme');
       name: 'description',
       message: 'Please write a short description of your project',
     },
-    // {
-    //   type: 'input',
-    //   name: 'contents',
-    //   message: 'Write tables of contents using numbers',
-    // },
     {
       type: 'input',
       name: 'installation',
@@ -49,37 +44,23 @@ const generateReadme = require('./generateReadme');
     {
       type: 'input',
       name: 'github',
-      message: 'Enter a link to your github ',
+      message: 'Enter github username',
     },
     {
       type: 'input',
       name: 'email',
-      message: 'Enter a link to your github ',
+      message: 'enter your email',
     },
-  ])
+  ]
 
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
-  .then((answers) => {
-    console.log(answers);
-  
-    fs.writeFile('README.md', (generateReadme(data)), (err) =>
-      err ? console.log(err) : console.log('success!')
-    );
-  });
-  
-  function makeHTML(data){
-    var userName = data.userName;
-    var location = data.location;
-    var bio = data.bio;
-    var GitHub = data.GitHub;
-    
+ const init = () => {
+  inquirer.prompt(questions)
+  .then((answers) => fs.writeFileSync('generatedREADME.md', generateReadme(answers))), (err) =>
+  err ? console.log(err) : console.log('success!')
+ } 
 
-}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
+   
 init();

@@ -6,7 +6,8 @@ ${data.description}
 
 
 ## Table of Contents
-${data.contents}
+-[Installation]
+-
 
 
 
@@ -20,10 +21,6 @@ ${data.usage}
 
 
 
-## License
-${data.license}
-
-
 
 ## Credits
 ${data.credits}
@@ -35,8 +32,8 @@ ${data.tests}
 
 
 ## Questions 
-${data.github}
-${data.email}`
+Github: [${data.github}](https://github.com/)${data.github}
+Email: ${data.email}`
 
 
 
